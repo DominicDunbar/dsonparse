@@ -75,31 +75,49 @@ First create your DsonArray or DsonObject
 
 Ex: 
 DsonObject mainobj=new DsonObject();
+
 DsonObject subobj=new DsonObject();
+
 DsonArray  array=new DsonArray();
 
+
 Dson dson1=new Dson(field_name, value);
+
 Dson dson2=new Dson(field_name, value);
+
 Dson dson3=new Dson(field_name, value);
+
 Dson dson4=new Dson(field_name, value);
+
 Dson dson5=new Dson(value);
+
 Dson dson6=new Dson(value);
 
+
 mainobj.append(dson1);
+
 mainobj.append(dson2);
 
+
 subobj.append(dson3);
+
 subobj.append(dson4);
 
+
 array.append(dson5);
+
 array.append(dson6);
 
+
 subobj.append("field_name", array);
+
 mainobj.append("field_name", subobj);
+
 
 To create the String from the object above
 
 DsonWriter writer=new DsonWriter();
+
 String jsonString=writer.buildDsonString(mainobj);
 
 --------------------------------------------------------------
